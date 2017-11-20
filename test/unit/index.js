@@ -1,6 +1,13 @@
+import 'babel-polyfill'
 import Vue from 'vue'
+import Vuetify from 'vuetify'
 
+Vue.use(Vuetify)
 Vue.config.productionTip = false
+
+var app = document.createElement('div')
+app.setAttribute('data-app', true)
+document.body.appendChild(app)
 
 // require all test files (files that ends with .spec.js)
 const testsContext = require.context('./specs', true, /\.spec$/)
